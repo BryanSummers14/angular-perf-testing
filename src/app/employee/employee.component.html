@@ -1,0 +1,13 @@
+<ng-template [ngIf]="employee">
+  <mat-list-item role="listitem">
+    <mat-card>
+      <div class="employee-name">{{ employee.name }}</div>
+      <div class="employee-info">
+        <mat-chip color="primary">{{ employee.salary | fib }}</mat-chip>
+        <button mat-icon-button (click)="removeEmployee(index)">
+          <mat-icon aria-label="remove employee">cancel</mat-icon>
+        </button>
+      </div>
+    </mat-card>
+  </mat-list-item>
+</ng-template>
